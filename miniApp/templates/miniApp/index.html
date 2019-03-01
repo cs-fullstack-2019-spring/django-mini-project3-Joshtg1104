@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+
+<h1>Teacher Timecard registry</h1>
+<h4>Register Time Entry <a href="{% url 'registry' %}">Here</a></h4>
+{% for entry in registries %}
+    <p>{{ entry.teacher_name }}</p>
+    <p>{{ entry.school_name }}</p>
+    <p><a href="{% url 'edit' registry.id %}">Edit</a></p>
+    <hr>
+{% endfor %}
+
+
+</body>
+</html>
